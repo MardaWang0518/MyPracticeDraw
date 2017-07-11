@@ -6,6 +6,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.mardawang.android.mypracticedraw.fragment.BreadFragment;
+import com.mardawang.android.mypracticedraw.fragment.CircleFragment;
+import com.mardawang.android.mypracticedraw.fragment.ColorFragment;
+import com.mardawang.android.mypracticedraw.fragment.PathFragment;
+import com.mardawang.android.mypracticedraw.fragment.RectFragment;
+import com.mardawang.android.mypracticedraw.fragment.TreeFragment;
 import com.nshmura.recyclertablayout.RecyclerTabLayout;
 
 import java.util.ArrayList;
@@ -42,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new ColorFragment());
         fragments.add(new CircleFragment());
         fragments.add(new RectFragment());
-        fragments.add(new BreadFragment());
         fragments.add(new PathFragment());
+        fragments.add(new TreeFragment());
+        fragments.add(new BreadFragment());
 
         ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager(),titles,fragments);
         view_pager.setAdapter(mAdapter);
