@@ -35,9 +35,10 @@ public class MyBreadView extends View {
         paint11.setColor(Color.WHITE);
         paint11.setStrokeWidth(4);
         paint11.setTextSize(50);
-        path1.moveTo(400,400);
-        path1.lineTo(100,200);
-        canvas.drawText("32.8%",150,220,paint11);
+        path1.moveTo(150,300);
+        path1.lineTo(400,300);
+        path1.rLineTo(400,400);
+        canvas.drawText("32.8%",150,260,paint11);
         canvas.drawPath(path1,paint11);
 
         Paint paint1 = new Paint();

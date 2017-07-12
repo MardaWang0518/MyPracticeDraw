@@ -2,6 +2,7 @@ package com.mardawang.android.mypracticedraw.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Build;
@@ -35,6 +36,17 @@ public class MyPathView extends View {
 
         Paint paint = new Paint();
         canvas.drawPath(path, paint);
+
+        //**************************
+        Path path0 = new Path();
+        path0.addArc(300, 600, 500, 800, -225, 225);
+        path0.arcTo(500, 600, 700, 800, -180, 225, false);
+        path0.lineTo(520, 942);
+        path0.close();
+
+        Paint paint0 = new Paint();
+        paint0.setColor(Color.RED);
+        canvas.drawPath(path0, paint0);
 
     }
 }
