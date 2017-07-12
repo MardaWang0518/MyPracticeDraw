@@ -56,6 +56,7 @@ public class MyTreeView extends View {
 
         paint.setColor(getResources().getColor(R.color.color_orange));
         paint.setTextSize(44);
+        paint.setAntiAlias(true);
         canvas.drawText("科比",180,1260,paint);
 
         paint.setColor(Color.GREEN);
@@ -77,7 +78,7 @@ public class MyTreeView extends View {
         paint.setTextSize(36);
         paint.setColor(Color.WHITE);
         canvas.drawText("Lakers",950,1250,paint);
-        canvas.drawText("天赋值",110,220,paint);
+        canvas.drawText("天赋值",70,220,paint);
 
     }
 }
