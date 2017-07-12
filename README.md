@@ -8,6 +8,8 @@
 
 ![](003.png)
 
+![](004.png)
+
 ## 自定义View的关键点：
 
    ### 1. 自定义绘制的方式是重写绘制方法，其中最常用的是 onDraw()
@@ -26,9 +28,13 @@
   Paint paint = new Paint();
 
   @Override
+
   protected void onDraw(Canvas canvas) {
+
       super.onDraw(canvas);    // 绘制一个圆
+
       canvas.drawCircle(300, 300, 200, paint);
+      kobe.jpg
   }
 
   ### Canvas.drawColor(@ColorInt int color) 颜色填充

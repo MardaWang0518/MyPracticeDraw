@@ -30,6 +30,6 @@ public class MyColorView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.an),0, 0, paint);
+        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kobe),0, 0, paint);
     }
 }
