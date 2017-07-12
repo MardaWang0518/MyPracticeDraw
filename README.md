@@ -60,27 +60,27 @@
             只能绘制横着的或者竖着的椭圆，不能绘制斜的（斜的倒是也可以，但不是直接使用 drawOval()，而是配合几何变换，后面会讲到）。left,
              top, right, bottom 是这个椭圆的左、上、右、下四个边界点的坐标
 
-   ### drawLine(float startX, float startY, float stopX, float stopY, Paint paint) 画线
+  ### drawLine(float startX, float startY, float stopX, float stopY, Paint paint) 画线
             startX, startY, stopX, stopY 分别是线的起点和终点坐标
 
-   ### drawLines(float[] pts, int offset, int count, Paint paint) / drawLines(float[] pts, Paint paint) 画线（批量）
+  ### drawLines(float[] pts, int offset, int count, Paint paint) / drawLines(float[] pts, Paint paint) 画线（批量）
             drawLines() 是 drawLine() 的复数版。
 
-    ### drawRoundRect(float left, float top, float right, float bottom, float rx, float ry, Paint paint) 画圆角矩形
+  ### drawRoundRect(float left, float top, float right, float bottom, float rx, float ry, Paint paint) 画圆角矩形
             left, top, right, bottom 是四条边的坐标，rx 和 ry 是圆角的横向半径和纵向半径
 
-    ### drawArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean useCenter, Paint paint) 绘制弧形或扇形
+  ### drawArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean useCenter, Paint paint) 绘制弧形或扇形
             drawArc() 是使用一个椭圆来描述弧形的。left, top, right, bottom 描述的是这个弧形所在的椭圆；startAngle 是弧形的起始角度（x 轴的正向，即正右的方向，是 0 度的位置；
             顺时针为正角度，逆时针为负角度），sweepAngle 是弧形划过的角度；useCenter 表示是否连接到圆心，如果不连接到圆心，就是弧形，如果连接到圆心，就是扇形
 
-    ### drawPath(Path path, Paint paint) 画自定义图形
+  ### drawPath(Path path, Paint paint) 画自定义图形
             当你要绘制的图形比较特殊，使用前面的那些方法做不到的时候，就可以使用 drawPath() 来绘制。
 
 
-    ### drawBitmap(Bitmap bitmap, float left, float top, Paint paint) 画 Bitmap
+  ### drawBitmap(Bitmap bitmap, float left, float top, Paint paint) 画 Bitmap
             绘制 Bitmap 对象，也就是把这个 Bitmap 中的像素内容贴过来。其中 left 和 top 是要把 bitmap 绘制到的位置坐标
 
-     ### drawText(String text, float x, float y, Paint paint) 绘制文字
+  ### drawText(String text, float x, float y, Paint paint) 绘制文字
             界面里所有的显示内容，都是绘制出来的，包括文字。 drawText() 这个方法就是用来绘制文字的。参数 text 是用来绘制的字符串，x 和 y 是绘制的起点坐标。
             Paint.setTextSize(float textSize)可以设置文字的大小
 
