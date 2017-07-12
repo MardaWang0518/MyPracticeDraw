@@ -34,13 +34,13 @@ public class MyTreeView extends View {
         paint.setStrokeWidth(6);
         path.moveTo(1000,1205);
         path.lineTo(100,1205);
-        path.lineTo(100,300);
+        path.lineTo(100,200);
 
         canvas.drawPath(path,paint);
 
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(getResources().getColor(R.color.color_green));
-        canvas.drawRect(200, 200, 275, 1200, paint);
+        canvas.drawRect(200, 150, 275, 1200, paint);
 
         canvas.drawRect(300, 600, 375, 1200, paint);
 
@@ -77,7 +77,7 @@ public class MyTreeView extends View {
         paint.setTextSize(36);
         paint.setColor(Color.WHITE);
         canvas.drawText("Lakers",950,1250,paint);
-        canvas.drawText("天赋值",110,320,paint);
+        canvas.drawText("天赋值",110,220,paint);
 
     }
 }

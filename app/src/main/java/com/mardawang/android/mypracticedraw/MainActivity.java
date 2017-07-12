@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inflateData() {
-        tool_bar.setTitle("Come on");
+        tool_bar.setTitle("曼巴精神");
         setSupportActionBar(tool_bar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

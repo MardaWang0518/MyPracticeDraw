@@ -55,7 +55,7 @@ public class MyBreadView extends View {
         canvas.drawText("25%",750,380,paint22);
 
         Paint paint2 = new Paint();
-        paint2.setColor(Color.GRAY);
+        paint2.setColor(Color.BLACK);
         paint2.setStyle(Paint.Style.FILL);
         canvas.drawArc(300,300,800,800,-62,90,true,paint2);
 
