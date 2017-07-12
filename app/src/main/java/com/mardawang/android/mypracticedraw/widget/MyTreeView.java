@@ -56,7 +56,7 @@ public class MyTreeView extends View {
 
         paint.setColor(getResources().getColor(R.color.color_orange));
         paint.setTextSize(44);
-        canvas.drawText("科比",180,1250,paint);
+        canvas.drawText("科比",180,1270,paint);
 
         paint.setColor(Color.GREEN);
         paint.setTextSize(28);
