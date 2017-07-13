@@ -78,25 +78,25 @@ public class MyBreadView extends View {
         //圆环
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.LTGRAY);
-        canvas.drawArc(300,1000,700,1400,-180,95,true,paint);
+        canvas.drawArc(300,900,700,1300,-180,95,true,paint);
         paint.setColor(Color.RED);
-        canvas.drawArc(300,1000,700,1400,-85,15,true,paint);
+        canvas.drawArc(300,900,700,1300,-85,15,true,paint);
         paint.setColor(getResources().getColor(R.color.color_purple));
-        canvas.drawArc(300,1000,700,1400,-70,20,true,paint);
+        canvas.drawArc(300,900,700,1300,-70,20,true,paint);
         paint.setColor(getResources().getColor(R.color.color_green));
-        canvas.drawArc(300,1000,700,1400,-50,40,true,paint);
+        canvas.drawArc(300,900,700,1300,-50,40,true,paint);
         paint.setColor(getResources().getColor(R.color.color_orange));
-        canvas.drawArc(300,1000,700,1400,-10,140,true,paint);
+        canvas.drawArc(300,900,700,1300,-10,140,true,paint);
         paint.setColor(Color.GRAY);
-        canvas.drawArc(300,1000,700,1400,130,50,true,paint);
+        canvas.drawArc(300,900,700,1300,130,50,true,paint);
 
         paint.setColor(getResources().getColor(R.color.color_gray6));
-        canvas.drawCircle(500,1200,170,paint);
+        canvas.drawCircle(500,1100,170,paint);
 
         paint.setColor(Color.WHITE);
         paint.setTextSize(44);
-        canvas.drawText("1453 calories",380,1200,paint);
-        canvas.drawText("burned",450,1250,paint);
+        canvas.drawText("1453 calories",380,1100,paint);
+        canvas.drawText("burned",450,1150,paint);
 
     }
 }
