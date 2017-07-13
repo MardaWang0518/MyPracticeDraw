@@ -77,16 +77,16 @@ public class MyBreadView extends View {
 
         //圆环
         paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.GREEN);
-        canvas.drawArc(300,1000,700,1400,-180,110,true,paint);
+        paint.setColor(Color.LTGRAY);
+        canvas.drawArc(300,1000,700,1400,-180,95,true,paint);
         paint.setColor(Color.RED);
+        canvas.drawArc(300,1000,700,1400,-85,15,true,paint);
+        paint.setColor(getResources().getColor(R.color.color_purple));
         canvas.drawArc(300,1000,700,1400,-70,20,true,paint);
-        paint.setColor(Color.BLACK);
-        canvas.drawArc(300,1000,700,1400,-50,70,true,paint);
-        paint.setColor(Color.YELLOW);
-        canvas.drawArc(300,1000,700,1400,20,80,true,paint);
-        paint.setColor(Color.BLUE);
-        canvas.drawArc(300,1000,700,1400,100,30,true,paint);
+        paint.setColor(getResources().getColor(R.color.color_green));
+        canvas.drawArc(300,1000,700,1400,-50,40,true,paint);
+        paint.setColor(getResources().getColor(R.color.color_orange));
+        canvas.drawArc(300,1000,700,1400,-10,140,true,paint);
         paint.setColor(Color.GRAY);
         canvas.drawArc(300,1000,700,1400,130,50,true,paint);
 
@@ -95,7 +95,8 @@ public class MyBreadView extends View {
 
         paint.setColor(Color.WHITE);
         paint.setTextSize(44);
-//        canvas.drawText("1453 calories\n burned",380,1200,paint);
-        canvas.drawText("android is a nice\n language",380,1200,paint);
+        canvas.drawText("1453 calories",380,1200,paint);
+        canvas.drawText("burned",450,1250,paint);
+
     }
 }
