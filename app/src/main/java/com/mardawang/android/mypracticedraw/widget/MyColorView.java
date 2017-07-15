@@ -1,7 +1,6 @@
 package com.mardawang.android.mypracticedraw.widget;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -16,7 +15,6 @@ import com.mardawang.android.mypracticedraw.R;
 
 public class MyColorView extends View {
     Paint paint = new Paint();
-    Bitmap bmp ;
 
 
     public MyColorView(Context context) {
@@ -30,6 +28,16 @@ public class MyColorView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kobe),0, 0, paint);
+        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kobe), 0, 0, paint);
+
+        paint.setColor(getResources().getColor(R.color.color_purple));
+        paint.setTextSize(32);
+        canvas.drawText("低头不是认输", 100, 400, paint);
+        paint.setTextSize(40);
+        canvas.drawText("是要看清自己脚下的路", 100, 450, paint);
+        paint.setTextSize(48);
+        canvas.drawText("昂头不是骄傲", 100, 510, paint);
+        paint.setTextSize(54);
+        canvas.drawText("是要看见自己的天空", 100, 580, paint);
     }
 }
