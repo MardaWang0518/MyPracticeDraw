@@ -3,6 +3,7 @@ package com.mardawang.android.mypracticedraw.widget;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.EmbossMaskFilter;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -14,7 +15,6 @@ import com.mardawang.android.mypracticedraw.R;
  */
 
 public class MyColorView extends View {
-    Paint paint = new Paint();
 
 
     public MyColorView(Context context) {
@@ -28,7 +28,13 @@ public class MyColorView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kobe), 0, 0, paint);
+        Paint paint0 = new Paint();
+//
+//        paint0.setMaskFilter(new BlurMaskFilter(50, BlurMaskFilter.Blur.NORMAL));
+        paint0.setMaskFilter(new EmbossMaskFilter(new float[]{0, 1, 1}, 0.2f, 8, 10));
+        canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.kobe), 0, 0, paint0);
+
+        Paint paint = new Paint();
 
         paint.setColor(getResources().getColor(R.color.color_purple));
         paint.setTextSize(32);
