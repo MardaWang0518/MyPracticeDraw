@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.mardawang.android.mypracticedraw.fragment.BreadFragment;
+import com.mardawang.android.mypracticedraw.fragment.CanvasClipFragment;
 import com.mardawang.android.mypracticedraw.fragment.CircleFragment;
 import com.mardawang.android.mypracticedraw.fragment.ColorFragment;
 import com.mardawang.android.mypracticedraw.fragment.PathFragment;
@@ -22,7 +23,7 @@ import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity {
-    String[] titles = {"drawColor","drawCircle","drawRect","drawPath","树状图","饼状图"};
+    String[] titles = {"drawColor","drawCircle","drawRect","drawPath","树状图","饼状图","canvasClip"};
 
     private List<Fragment> fragments = new ArrayList<>();
     @BindView(R.id.toolbar)
@@ -45,12 +46,22 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(tool_bar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        fragments.add(new ColorFragment());
-        fragments.add(new CircleFragment());
-        fragments.add(new RectFragment());
-        fragments.add(new PathFragment());
-        fragments.add(new TreeFragment());
-        fragments.add(new BreadFragment());
+        ColorFragment colorfragment = new ColorFragment();
+        CircleFragment circlefragment = new CircleFragment();
+        RectFragment rectfragment = new RectFragment();
+        PathFragment pathfragment = new PathFragment();
+        TreeFragment treefragment = new TreeFragment();
+        BreadFragment breadfragment = new BreadFragment();
+        CanvasClipFragment clipfragment = new CanvasClipFragment();
+
+        fragments.add(colorfragment);
+        fragments.add(circlefragment);
+        fragments.add(rectfragment);
+        fragments.add(pathfragment);
+        fragments.add(treefragment);
+        fragments.add(breadfragment);
+        fragments.add(clipfragment);
+        view_pager.setCurrentItem(0);
 
         ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager(),titles,fragments);
         view_pager.setAdapter(mAdapter);
