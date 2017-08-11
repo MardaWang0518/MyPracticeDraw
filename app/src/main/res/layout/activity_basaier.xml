@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.mardawang.android.mypracticedraw.widget.MyBasierView
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

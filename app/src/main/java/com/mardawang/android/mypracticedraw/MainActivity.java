@@ -1,90 +1,40 @@
 package com.mardawang.android.mypracticedraw;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 
-import com.mardawang.android.mypracticedraw.fragment.BreadFragment;
-import com.mardawang.android.mypracticedraw.fragment.CanvasClipFragment;
-import com.mardawang.android.mypracticedraw.fragment.CircleFragment;
-import com.mardawang.android.mypracticedraw.fragment.ColorFragment;
-import com.mardawang.android.mypracticedraw.fragment.PathFragment;
-import com.mardawang.android.mypracticedraw.fragment.RectFragment;
-import com.mardawang.android.mypracticedraw.fragment.TreeFragment;
-import com.nshmura.recyclertablayout.RecyclerTabLayout;
+/**
+ * Created by mardawang on 2017/8/11.
+ */
 
-import java.util.ArrayList;
-import java.util.List;
+public class MainActivity extends Activity {
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-
-public class MainActivity extends AppCompatActivity {
-    String[] titles = {"drawColor","drawCircle","drawRect","drawPath","树状图","饼状图","canvasClip"};
-
-    private List<Fragment> fragments = new ArrayList<>();
-    @BindView(R.id.toolbar)
-    Toolbar tool_bar;
-    @BindView(R.id.recycler_tab_layout)
-    RecyclerTabLayout tab_layout;
-    @BindView(R.id.view_pager)
-    ViewPager view_pager;
+    private Button btn_view;
+    private Button btn_basier;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        inflateData();
-    }
+        btn_view = (Button) findViewById(R.id.btn_view);
+        btn_basier = (Button) findViewById(R.id.btn_basier);
 
-    private void inflateData() {
-        tool_bar.setTitle("曼巴精神");
-        setSupportActionBar(tool_bar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        ColorFragment colorfragment = new ColorFragment();
-        CircleFragment circlefragment = new CircleFragment();
-        RectFragment rectfragment = new RectFragment();
-        PathFragment pathfragment = new PathFragment();
-        TreeFragment treefragment = new TreeFragment();
-        BreadFragment breadfragment = new BreadFragment();
-        CanvasClipFragment clipfragment = new CanvasClipFragment();
-
-        fragments.add(colorfragment);
-        fragments.add(circlefragment);
-        fragments.add(rectfragment);
-        fragments.add(pathfragment);
-        fragments.add(treefragment);
-        fragments.add(breadfragment);
-        fragments.add(clipfragment);
-        view_pager.setCurrentItem(0);
-
-        ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager(),titles,fragments);
-        view_pager.setAdapter(mAdapter);
-
-        tab_layout.setIndicatorHeight(6);
-        tab_layout.setUpWithViewPager(view_pager);
-
-        view_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                view_pager.setCurrentItem(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MyViewActivity.class));
             }
         });
-    }
 
+        btn_basier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BasierActivity.class));
+            }
+        });
+
+    }
 }

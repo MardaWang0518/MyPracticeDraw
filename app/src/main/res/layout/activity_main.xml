@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/header"
+    <Button
+        android:id="@+id/btn_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:text="自定义view01"
+        android:layout_marginTop="30dp"/>
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"/>
-
-        <com.nshmura.recyclertablayout.RecyclerTabLayout
-            android:id="@+id/recycler_tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@color/color_orange"
-            app:rtl_tabMaxWidth="300dp"
-            app:rtl_tabSelectedTextColor="@android:color/white" />
-    </LinearLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
+    <Button
+        android:id="@+id/btn_basier"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/header" />
-</RelativeLayout>
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="贝塞尔wave"/>
+
+</LinearLayout>
