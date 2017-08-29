@@ -38,15 +38,13 @@ public class MyPathView extends View {
         canvas.drawPath(path, paint);
 
         //**************************
-        Path path0 = new Path();
-        path0.addArc(300, 600, 500, 800, -225, 225);
-        path0.arcTo(500, 600, 700, 800, -180, 225, false);
-        path0.lineTo(500, 942);
-        path0.close();
-
-        Paint paint0 = new Paint();
-        paint0.setColor(Color.RED);
-        canvas.drawPath(path0, paint0);
+        path.reset();
+        paint.setColor(Color.RED);
+        path.addArc(300, 600, 500, 800, -225, 225);
+        path.arcTo(500, 600, 700, 800, -180, 225, false);
+        path.lineTo(500, 942);
+        path.close();
+        canvas.drawPath(path, paint);
 
     }
 }
