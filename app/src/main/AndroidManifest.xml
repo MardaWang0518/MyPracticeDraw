@@ -18,6 +18,7 @@
 
         <activity android:name=".MyViewActivity"/>
         <activity android:name=".BasierActivity"/>
+        <activity android:name=".AnimateActivity"/>
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.mardawang.android.mypracticedraw.fragment.AnimatorFragment;
 import com.mardawang.android.mypracticedraw.fragment.BreadFragment;
 import com.mardawang.android.mypracticedraw.fragment.CanvasClipFragment;
 import com.mardawang.android.mypracticedraw.fragment.CircleFragment;
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
 
 
 public class MyViewActivity extends AppCompatActivity {
-    String[] titles = {"drawColor","drawCircle","drawRect","drawPath","树状图","饼状图","canvasClip"};
+    String[] titles = {"drawColor","drawCircle","drawRect","drawPath","树状图","饼状图","canvasClip","animator"};
 
     private List<Fragment> fragments = new ArrayList<>();
     @BindView(R.id.toolbar)
@@ -53,6 +54,7 @@ public class MyViewActivity extends AppCompatActivity {
         TreeFragment treefragment = new TreeFragment();
         BreadFragment breadfragment = new BreadFragment();
         CanvasClipFragment clipfragment = new CanvasClipFragment();
+        AnimatorFragment animatefragment = new AnimatorFragment();
 
         fragments.add(colorfragment);
         fragments.add(circlefragment);
@@ -61,6 +63,7 @@ public class MyViewActivity extends AppCompatActivity {
         fragments.add(treefragment);
         fragments.add(breadfragment);
         fragments.add(clipfragment);
+        fragments.add(animatefragment);
         view_pager.setCurrentItem(0);
 
         ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager(),titles,fragments);
